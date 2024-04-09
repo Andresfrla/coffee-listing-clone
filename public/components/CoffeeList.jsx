@@ -27,19 +27,29 @@ const CoffeeList = () => {
           {coffees.map((coffee) => (
             <div key={coffee.id} className="mt-[280px]">
               <img className="rounded-xl" src={coffee.image} alt={coffee.name} />
-               <div className="heading"> 
-                  <h3 className="text-[16px] text-[#FEF7EE] mt-4">{coffee.name}</h3>
+              {coffee.popular && <div className="popular text-[10px]">Popular</div>}
+               <div className="heading items-center"> 
+                  <h3 className="text-[16px] text-[#FEF7EE] mt-4 coffee-name">{coffee.name}</h3>
                   <div className="price">
                     <p>{coffee.price}</p>
                   </div>
                 </div>
-              {coffee.popular && <div className="popular text-[10px]">Popular</div>}
               {coffee.rating ? (
-                <div>{coffee.rating}</div>
+                <div className="text-[#FEF7EE] rating flex items-center text-center">
+                  <img src="../Star_fill.svg" alt="star"/>
+                  {coffee.rating} 
+                  {coffee.votes ? <div className="votes">({coffee.votes} votes)</div> : null}
+                </div>
               ) : (
-                <div>no rating</div>
+                <div className="text-[#6F757C] no-rating">
+                  <div className="flex">
+                    <img src="../Star.svg" alt="star" className="mr-[20px]"/>
+                    No ratings
+                  </div>
+                  {coffee.available && <div className="sold-out">Sold out</div>}
+                </div>
               )}
-              {coffee.votes ? <div>({coffee.votes} votes)</div> : null}
+              
             </div>
           ))}
         </div>
@@ -50,4 +60,4 @@ const CoffeeList = () => {
   );
 };
 
-export default CoffeeList;
+export default CoffeeList; 

@@ -35,27 +35,50 @@ body {
 .heading {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   margin-top: 10px;
 }
 
 .coffee-name {
-  font-size: 40px;
+  font-size: 16px;
+  display: flex;
 }
 
 .price {
   background-color: #BEE3CC;
   border-radius: 6px;
-  padding: 0.25rem;
+  padding: 0.4rem;
 }
 
 .popular {
   background-color: #F6C768;
   border-radius: 20px;
-  padding: 3px 18px;
+  padding: 5px 18px;
+  margin-top: -150px;
+  margin-left: 10px;
+  position: absolute;
   display: inline-block;
   font-size: 12px;
   font-weight: 600;
+}
+
+.rating{
+  font-size: 14px;
+}
+
+.votes{
+  padding-left: 5px;
+  color: #6F757C;
+}
+
+.no-rating{
+  display: flex;
+  justify-content: space-between;
+}
+
+.sold-out {
+  color: #ED735D;
+  margin-right: 0;
 }
 
 @layer utilities {
