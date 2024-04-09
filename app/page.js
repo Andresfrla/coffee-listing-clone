@@ -1,4 +1,4 @@
-import CoffeeList from "@/public/components/CoffeList";
+import CoffeeList from "@/public/components/CoffeeList";
 import Image from "next/image";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
             <button className="text-[#FEF7EE]">Available Now</button>
           </div>
         </div>
-        <div className="flex items-center text-center">
+        <div>
           <CoffeeList />
         </div>
       </div>
