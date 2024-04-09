@@ -21,17 +21,19 @@ const CoffeeList = () => {
   };
 
   return (
-    <div className="mt-4 border-lg border-gray-300 bg-gray-100 p-4 ">
+    <div className="mt-4">
       {coffees ? (
         <div className="grid grid-cols-3 gap-4 grid-temp">
           {coffees.map((coffee) => (
-            <div key={coffee.id} className="">
+            <div key={coffee.id} className="mt-[280px]">
               <img className="rounded-xl" src={coffee.image} alt={coffee.name} />
-              <h3 className="text-[16px] text-[#FEF7EE] mt-4">{coffee.name}</h3>
-              <div className="bg-[#BEE3CC] p-2">
-                <p className="">{coffee.price}</p>
-              </div>
-              {coffee.popular && <div>popular</div>}
+               <div className="heading"> 
+                  <h3 className="text-[16px] text-[#FEF7EE] mt-4">{coffee.name}</h3>
+                  <div className="price">
+                    <p>{coffee.price}</p>
+                  </div>
+                </div>
+              {coffee.popular && <div className="popular text-[10px]">Popular</div>}
               {coffee.rating ? (
                 <div>{coffee.rating}</div>
               ) : (

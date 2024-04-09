@@ -27,9 +27,35 @@ body {
 .grid-temp {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 2rem;
   margin-left: 125px;
   margin-right: 125px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.coffee-name {
+  font-size: 40px;
+}
+
+.price {
+  background-color: #BEE3CC;
+  border-radius: 6px;
+  padding: 0.25rem;
+}
+
+.popular {
+  background-color: #F6C768;
+  border-radius: 20px;
+  padding: 3px 18px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 @layer utilities {
