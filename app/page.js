@@ -13,7 +13,7 @@ export default function Home() {
             <button className="text-[#FEF7EE]">Available Now</button>
           </div>
         </div>
-        <div>
+        <div className="">
           <CoffeeList />
         </div>
       </div>

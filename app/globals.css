@@ -24,6 +24,14 @@ body {
   background-color: #111315;
 }
 
+.grid-temp {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-left: 125px;
+  margin-right: 125px;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
